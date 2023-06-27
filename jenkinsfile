@@ -4,6 +4,11 @@ pipeline{
         maven 'm1'
     }
     stages {
+stage('test') {
+    steps {
+      sh 'mvn test'
+    }
+  }
   stage('clean') {
     steps {
       sh 'mvn clean'
